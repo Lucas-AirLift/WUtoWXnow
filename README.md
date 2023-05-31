@@ -1,5 +1,5 @@
 # WUtoWXnow
-A simple python script to take personal weather station that is uploaded to WeatherUnderground and have it output to a WXnow.txt file for APRS use. I created this becasue I was unable to get WeeWX working correctly on my RPi1A and did not like the solutions using an SDR to pull the data OTA.
+A simple python script to take personal weather station data that is uploaded to WeatherUnderground and have it output to a WXnow.txt file for APRS use. I created this becasue I was unable to get WeeWX working correctly on my RPi1A and did not like the solutions using an SDR to pull the data OTA.
 
 This script generates a WXnow.txt file in the 2 line Cumulus format.
 
