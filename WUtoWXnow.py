@@ -42,9 +42,15 @@ def generate_wxnow_file(weather_data, file_path):
 
 def main(api_key, station_id, file_path):
     while True:
-        weather_data = get_weather_data(api_key, station_id)
-        generate_wxnow_file(weather_data, file_path)
-        time.sleep(60)
+        try:
+            weather_data = get_weather_data(api_key, station_id)
+            generate_wxnow_file(weather_data, file_path)
+        except Exception as e:
+            print(f"An error occurred: {str(e)}")
+            print("Retrying...")
+            time.sleep(60)
+        else:
+            time.sleep(60)
 
 if __name__ == '__main__':
     main(API_KEY, STATION_ID, FILE_PATH)
